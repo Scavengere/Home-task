@@ -1,0 +1,4 @@
+HyperX Alloy FPS Pro|2|100
+Logitech G213 Prodigy|1|80
+Razer BlackWidow Tournament Chroma V2|3|70
+SteelSeries Apex 350|0|60

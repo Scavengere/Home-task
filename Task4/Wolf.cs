@@ -12,7 +12,12 @@ namespace Task4
         public int Age { get; set; }
         public string Sex { get; set; }
         public string CurrentOccupation { get; set; }
-
+        public Wolf()
+        {
+            Name = "";
+            Age = 0;
+            Sex = "";
+        }
         public Wolf(string name, int age, string sex, Random rand)
         {
             Name = name;

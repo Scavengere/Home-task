@@ -12,6 +12,12 @@ namespace Task4
         public int Age { get; set; }
         public string Sex { get; set; }
         public string CurrentOccupation { get; set; }
+        public Bear()
+        {
+            Name = "";
+            Age = 0;
+            Sex = "";
+        }
 
         public Bear(string name, int age, string sex, Random rand)
         {

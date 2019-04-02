@@ -12,7 +12,12 @@ namespace Task4
         public int Age { get; set; }
         public string Sex { get; set; }
         public string CurrentOccupation { get; set; }
-
+        public Monkey()
+        {
+            Name = "";
+            Age = 0;
+            Sex = "";
+        }
         public Monkey(string name, int age, string sex, Random rand)
         {
             Name = name;

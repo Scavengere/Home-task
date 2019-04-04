@@ -10,17 +10,13 @@ namespace Task4
     {
         static void Main(string[] args)
         {
-            Group<Bear>.Add("Миша", 10, "M");
-            Group<Elephant>.Add("Лунтик", 5, "F");
-            Group<Monkey>.Add("Фокся", 2, "F");
-            Group<Tiger>.Add("Маша", 6, "M");
-            Group<Wolf>.Add("Маркиз",3, "M");
-           
-            Group<Bear>.OutputAllAnimals();
-            Group<Elephant>.OutputAllAnimals();
-            Group<Monkey>.OutputAllAnimals();
-            Group<Tiger>.OutputAllAnimals();
-            Group<Wolf>.OutputAllAnimals();
+            var group = new Group();
+            group.Add(new Bear("Миша", 10, "M", Group.rand));
+            group.Add(new Elephant("Лунтик", 5, "F", Group.rand));
+            group.Add(new Monkey("Фокся", 2, "F", Group.rand));
+            group.Add(new Tiger("Маша", 6, "M", Group.rand));
+            group.Add(new Wolf("Маркиз", 3, "M", Group.rand));
+            group.OutputAllAnimals();
             Console.ReadKey();
         }
     }

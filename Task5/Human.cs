@@ -11,7 +11,6 @@ namespace Task5
         protected string Name { get; set; }
         protected int Age { get; set; }
         protected string Sex { get; set; }
-        public Random rand = new Random();
         public abstract void GoSleep();
         public abstract void GoEat();
         public abstract void LeisureTime();

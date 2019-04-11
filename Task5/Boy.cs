@@ -45,7 +45,8 @@ namespace Task5
         }
         public override void LeisureTime()
         {
-            int randomrandomAction = rand.Next(0,5);
+        Random rand = new Random();
+        int randomrandomAction = rand.Next(0,5);
             switch (randomrandomAction)
             {
                 case 0:

@@ -2,37 +2,31 @@
 
 namespace Task10
 {
-    class Bear : IAnimal
+    class Bear : WildAnimal, ICanEat, ICanMove, ICanSleep
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string Sex { get; set; }
-        public string CurrentOccupation { get; set; }
         public Bear()
         {
-            Name = "";
+            Name = string.Empty;
             Age = 0;
-            Sex = "";
+            Sex = string.Empty;
         }
-
-        public Bear(string name, int age, string sex, Random rand)
+        public Bear(string name, int age, string sex, TypeOfAnimalNutrition typeOfAnimalNutrition, DistributionZone distributionZone, Random rand)
         {
             Name = name;
             Age = age;
             Sex = sex;
-            Status status = (Status)rand.Next(0, 3);
-            CurrentOccupation = status.ToString();
+            TypeOfAnimalNutrition = typeOfAnimalNutrition;
+            DistributionZone = distributionZone;
+            CurrentOccupation = (Status)rand.Next(0, 3);
         }
         public void Eat()
         {
             Console.WriteLine("Bear is eating.");
         }
-
         public void Move()
         {
             Console.WriteLine("Bear is moving.");
         }
-
         public void Sleep()
         {
             Console.WriteLine("Bear is sleeping.");

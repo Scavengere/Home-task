@@ -13,9 +13,7 @@ namespace Task10
         string Name { get; set; }
         int Age { get; set; }
         string Sex { get; set; }
-        string CurrentOccupation { get; set; }
-        void Eat();
-        void Sleep();
-        void Move();
+        Status CurrentOccupation { get; set; }
+
     }
 }

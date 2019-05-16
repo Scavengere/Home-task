@@ -3,20 +3,17 @@ using System.Collections.Generic;
 
 namespace Task10
 {
-    class Group
+    class Group<T> where T : IAnimal
     {
-        public static Random rand = new Random();
-        public static List<IAnimal> Animals = new List<IAnimal>();
-
-        public void Add<T>(T temp) where T : IAnimal, new()
+        public List<T> Animals { get; set; }
+        public Group()
         {
-            Animals.Add(temp);
+            Animals = new List<T>();
         }
         public void OutputAllAnimals()
         {
-            foreach (IAnimal animal in Animals)
-                Console.WriteLine($"{animal}  {animal.Name}  {animal.Age}  {animal.Sex} {animal.CurrentOccupation}");
+            foreach (T animal in Animals)
+                Console.WriteLine($"{animal.ToString().Remove(0,7)}  {animal.Name}  {animal.Age}  {animal.Sex} {animal.CurrentOccupation}");
         }
-
     }
 }

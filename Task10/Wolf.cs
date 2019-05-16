@@ -2,25 +2,22 @@
 
 namespace Task10
 {
-    class Wolf : IAnimal
+    class Wolf : WildAnimal, ICanEat, ICanMove, ICanSleep
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string Sex { get; set; }
-        public string CurrentOccupation { get; set; }
         public Wolf()
         {
             Name = "";
             Age = 0;
             Sex = "";
         }
-        public Wolf(string name, int age, string sex, Random rand)
+        public Wolf(string name, int age, string sex, TypeOfAnimalNutrition typeOfAnimalNutrition, DistributionZone distributionZone, Random rand)
         {
             Name = name;
             Age = age;
             Sex = sex;
-            Status status = (Status)rand.Next(0, 3);
-            CurrentOccupation = status.ToString();
+            TypeOfAnimalNutrition = typeOfAnimalNutrition;
+            DistributionZone = distributionZone;
+            CurrentOccupation = (Status)rand.Next(0, 3);
         }
         public void Eat()
         {
